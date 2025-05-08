@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Diagnosis</title>
+</head>
+<body>
+    <h1>Medical Diagnosis System</h1>
+    <form method="POST" action="/diagnose">
+        <label for="symptoms">Select Symptoms:</label><br>
+        {% for symptom in symptoms %}
+            <input type="checkbox" name="symptoms" value="{{ symptom }}"> {{ symptom }}<br>
+        {% endfor %}
+        <button type="submit">Diagnose</button>
+    </form>
+</body>
+</html>

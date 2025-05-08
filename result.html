@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnosis Result</title>
+</head>
+<body>
+    <h1>Diagnosis Result</h1>
+    <p><strong>Disease:</strong> {{ disease }}</p>
+    <p><strong>Description:</strong> {{ description }}</p>
+    <p><strong>Precautions:</strong></p>
+    <ul>
+        {% for precaution in precautions %}
+            <li>{{ precaution }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Go Back</a>
+</body>
+</html>
